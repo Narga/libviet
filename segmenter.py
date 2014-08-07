@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
+
 # import string
+from __future__ import unicode_literals
+from io import open
 
 
 def char_in_word(char):
@@ -82,8 +86,8 @@ def main():
 
     dictionary = set(open("vn_words/Viet74K.txt").read().split("\n"))
 
-    print(segmentize(sent1, dictionary))
-    print(segmentize(sent2, dictionary))
+    print(", ".join(segmentize(sent1, dictionary)))
+    print(", ".join(segmentize(sent2, dictionary)))
 
 
 if __name__ == "__main__":
