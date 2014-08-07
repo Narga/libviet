@@ -67,10 +67,10 @@ def segmentize(sent, dictionary):
     # Very simple state machine.
     # TODO Think about training and backtracking.
     while i < len_uni:
-        if i < len_tri and tri[i] in dictionary:
+        if i < len_tri and tri[i].lower() in dictionary:
             segments.append(tri[i])
             i += 3
-        elif i < len_bi and bi[i] in dictionary:
+        elif i < len_bi and bi[i].lower() in dictionary:
             segments.append(bi[i])
             i += 2
         else:
